@@ -35,11 +35,36 @@ public abstract class MiddleEarthCharacter {
 	 /*
 	  * displays info name health and power of character
 	  */
-	 public void displayinfo() {
+	 public void displayInfo() {
 	System.out.println("name: "+this.name+"\n");
 	System.out.println("health: "+this.health+"\n");
 	System.out.println("power: "+this.power+"\n");
 	 }
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getHealth() {
+		return health;
+	}
+
+	public void setHealth(double health) {
+		this.health = health;
+	}
+
+	public double getPower() {
+		return power;
+	}
+
+	public void setPower(double power) {
+		this.power = power;
+	}
+	 
 	 
 	 
 }
