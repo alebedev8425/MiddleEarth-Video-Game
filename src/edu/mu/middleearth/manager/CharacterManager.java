@@ -37,7 +37,55 @@ public class CharacterManager {
 		return true;
 		
 	}
+	/**
+	 * 
+	 * @param name
+	 * @return
+	 */
 	
-	
+	public MiddleEarthCharacter getCharacter(String name) {
+		for (int i = 0; i < characters.length; i++) {
+			if (characters[i].getName().equalsIgnoreCase(name)) {
+				return characters[i];
+			}
+		}
+		return null;
+	}
 
+	/**
+	 * 
+	 * @param character
+	 * @param name
+	 * @param health
+	 * @param power
+	 * @return
+	 */
+
+	public boolean updateCharacter(MiddleEarthCharacter character, String name, int health, int power) {
+	    if (character == null) {
+            return false;
+        }
+        boolean updatedOrNot = false;
+        if (!character.getName().equals(name)) {
+            character.setName(name);
+            updatedOrNot = true;
+        }
+        if (character.getHealth() != health) {
+            character.setHealth(health);
+            updatedOrNot = true;
+        }
+        if (character.getPower() != power) {
+            character.setPower(power);
+            updatedOrNot = true;
+        }
+        
+        return updatedOrNot;
+        
 }
+
+	
+	
+	
+}
+	
+	
