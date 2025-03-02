@@ -14,12 +14,12 @@ public class MiddleEarthApp {
 		Orc myorc = new Orc("orcus",100,25);
 		Elf myelf = new Elf("alfonso",100,5);
 		
-		mydwarf.displayinfo();//test display info 
+		mydwarf.displayInfo();//test display info 
 		System.out.println("race is: "+mydwarf.getRace()); //test race 
 		
 		
 		myhuman.attack(mywizard); 
-		mywizard.displayinfo();  //info after attack, should be lower than initial health stat
+		mywizard.displayInfo();  //info after attack, should be lower than initial health stat
 		
 	}//delete test code whenever necessary!!
 

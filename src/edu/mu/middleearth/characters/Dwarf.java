@@ -17,17 +17,17 @@ public class Dwarf extends MiddleEarthCharacter {
 	@Override
 	public Boolean attack(MiddleEarthCharacter target) {
 		
-		if (target.getRace() == "elf") { 
-		target.health -= (this.power *1.5);
-		return true;
-		}
-		
-		if (target.getRace() == "dwarf" || target.getRace() =="wizard") {
-			return false; 
-		}
-		
-		target.health -= this.power; 
-		return true; 
+		if (target.getRace().equals("elf")) { 
+			target.health -= (this.power *1.5);
+			return true;
+			}
+			
+			if (target.getRace().equals("dwarf") || target.getRace().equals("wizard")) {
+				return false; 
+			}
+			
+			target.health -= this.power; 
+			return true; 
 	}
 	
 	/*
