@@ -18,7 +18,7 @@ public class CharacterManager {
 	
 	}
 	/**
-	 * addCharacter method adds a character to the characters array
+	 * addCharacter method adds a character to the characters array, if it overfills it doubles the size of the array
 	 * @param c this is the input MiddleEarthCharacter to be added
 	 * @return boolean returns false if character addition did not work and true if it did
 	 */
