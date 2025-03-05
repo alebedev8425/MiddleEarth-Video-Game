@@ -158,12 +158,8 @@ public class Menu {
 	    private void deleteCharacter() {
 	        MiddleEarthCharacter character = null;
 	        while (character == null) {
-	            System.out.print("Enter the name of the character to delete (or type 'cancel' to return): ");
+	            System.out.print("Enter the name of the character to delete: ");
 	            String name = scanner.nextLine();
-	            if (name.equalsIgnoreCase("cancel")) {
-	                System.out.println("Delete cancelled.");
-	                return;
-	            }
 	            character = manager.getCharacter(name);
 	            if (character == null) {
 	                System.out.println("Character not found. Please try again.");

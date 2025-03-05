@@ -44,7 +44,10 @@ public class CharacterManager {
 	 */
 	
 	public MiddleEarthCharacter getCharacter(String name) {
-		for (int i = 0; i < characters.length; i++) {
+		if (name == null) {
+			return null;
+		}
+		for (int i = 0; i < size; i++) {
 			if (characters[i].getName().equalsIgnoreCase(name)) {
 				return characters[i];
 			}
