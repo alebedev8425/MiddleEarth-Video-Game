@@ -101,20 +101,26 @@ public class Menu {
 	    }
 	    
 	    private void attackCharacter() {
-	        System.out.print("Enter the name of the attacking character: ");
-	        String attackerName = scanner.nextLine();
-	        MiddleEarthCharacter attacker = manager.getCharacter(attackerName);
-	        if (attacker == null) {
-	            System.out.println("Attacker not found.");
-	            return;
+	        MiddleEarthCharacter attacker = null;
+	        while (attacker == null) {
+	            System.out.print("Enter the name of the attacking character: ");
+	            String attackerName = scanner.nextLine();
+	            attacker = manager.getCharacter(attackerName);
+	            if (attacker == null) {
+	                System.out.println("Attacker not found. Please try again.");
+	            }
 	        }
-	        System.out.print("Enter the name of the target character: ");
-	        String targetName = scanner.nextLine();
-	        MiddleEarthCharacter target = manager.getCharacter(targetName);
-	        if (target == null) {
-	            System.out.println("Target not found.");
-	            return;
+	        
+	        MiddleEarthCharacter target = null;
+	        while (target == null) {
+	            System.out.print("Enter the name of the target character: ");
+	            String targetName = scanner.nextLine();
+	            target = manager.getCharacter(targetName);
+	            if (target == null) {
+	                System.out.println("Target not found. Please try again.");
+	            }
 	        }
+	        
 	        System.out.println("\n" + attacker.getName() + " (" + attacker.getRace() + ") attacks " 
 	                + target.getName() + " (" + target.getRace() + ")");
 	        if (attacker.attack(target)) {
