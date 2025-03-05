@@ -1,17 +1,18 @@
 package edu.mu.middleearth.characters;
 
 public class Elf extends MiddleEarthCharacter{
-	/*
-	 * Calls MiddleEarthCharacter constructor 
+	/**
+	 * MiddleEarthCharacter parameterized constructor 
 	 */
 	public Elf(String name, double health, double power) {
 		super(name, health, power);
 	}
-	/*
+	/**
 	 * Function uses getRace() on the parameter(target) then compares the string values to determine 
 	 * effectiveness of attack. 
 	 *  *1.5 against orc, *0 against dwarf and elf, *1 for everything else
-	 * @param MiddleEarthCharacter
+	 * @param MiddleEarthCharacter target of the attack
+	 * @return boolean true for successful attack, false for unsuccessful attack
 	 */
 	@Override
 	public Boolean attack(MiddleEarthCharacter target) {
@@ -29,7 +30,7 @@ public class Elf extends MiddleEarthCharacter{
 			return true;  
 	}
 	
-	/*
+	/**
 	 * returns race as a string. Important for attack function as the all lower case name is used 
 	 * for comparison. 
 	 */
