@@ -9,7 +9,7 @@ public class CharacterManager {
 	private static final int INITIAL_CAPACITY = 10;
 	
 	/**
-	 * 
+	 * CharacterManager default constructor
 	 */
 	
 	public CharacterManager() {
@@ -18,9 +18,9 @@ public class CharacterManager {
 	
 	}
 	/**
-	 * 
-	 * @param c
-	 * @return
+	 * addCharacter method adds a character to the characters array
+	 * @param c this is the input MiddleEarthCharacter to be added
+	 * @return boolean returns false if character addition did not work and true if it did
 	 */
 	
 	public boolean addCharacter(MiddleEarthCharacter c) {
@@ -38,9 +38,9 @@ public class CharacterManager {
 		
 	}
 	/**
-	 * 
-	 * @param name
-	 * @return
+	 * this method allows retrieval of a character from the characters array
+	 * @param name the name of the character that should be retrieved
+	 * @return returns the character  if found in the array, returns null if not
 	 */
 	
 	public MiddleEarthCharacter getCharacter(String name) {
@@ -56,12 +56,12 @@ public class CharacterManager {
 	}
 
 	/**
-	 * 
-	 * @param character
-	 * @param name
-	 * @param health
-	 * @param power
-	 * @return
+	 * updateCharacter method allows the update details of a character already stored in the system
+	 * @param character the MiddleEarthCharacter that should be updated
+	 * @param name the name of the character
+	 * @param health the health of the character
+	 * @param power the power of the character
+	 * @return boolean returns true if update was successful, and false if not
 	 */
 
 	public boolean updateCharacter(MiddleEarthCharacter character, String name, int health, int power) {
@@ -86,9 +86,9 @@ public class CharacterManager {
         
 }
 	/**
-	 * 
-	 * @param character
-	 * @return
+	 * deleteCharacter method allows deletion of a character stored in the system
+	 * @param character inputs the character that should be deleted
+	 * @return boolean returns true if deletion was successful, and false if not
 	 */
 
 	public boolean deleteCharacter(MiddleEarthCharacter character) {
@@ -110,7 +110,7 @@ public class CharacterManager {
 	}
 	
 	/**
-	 * 
+	 * this method allows displaying of all characters stored in the system
 	 */
 	
     public void displayAllCharacters() {
