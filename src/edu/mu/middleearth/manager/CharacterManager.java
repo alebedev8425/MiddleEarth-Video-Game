@@ -82,9 +82,42 @@ public class CharacterManager {
         return updatedOrNot;
         
 }
+	/**
+	 * 
+	 * @param character
+	 * @return
+	 */
 
+	public boolean deleteCharacter(MiddleEarthCharacter character) {
+		 if (character == null) {
+	            return false;
+	        }
+	        for (int i = 0; i < size; i++) {
+	            if (characters[i] == character) {
+	                // Shift elements left.
+	                for (int j = i; j < size - 1; j++) {
+	                    characters[j] = characters[j + 1];
+	                }
+	                characters[size - 1] = null;
+	                size--;
+	                return true;
+	            }
+	        }
+	        return false;
+	}
 	
+	/**
+	 * 
+	 */
 	
+    public void displayAllCharacters() {
+        if (size == 0) {
+            System.out.println("No characters to display.");
+        }
+        for (int i = 0; i < size; i++) {
+            characters[i].displayInfo();
+        }
+    }
 	
 }
 	
