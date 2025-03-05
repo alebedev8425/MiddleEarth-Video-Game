@@ -7,7 +7,14 @@ import edu.mu.middleearth.characters.MiddleEarthCharacter;
 import edu.mu.middleearth.manager.CharacterManager;
 
 public class Menu {
+	/**
+	 * scanner initialization to allow user input
+	 */
+	
 	  private Scanner scanner;
+	  /**
+	   * manager initialization to access the character manager
+	   */
 	    private CharacterManager manager;
 
 	    /**
@@ -64,6 +71,10 @@ public class Menu {
 	            }
 	        } while (choice != 6);
 	    }
+	    
+	    /**
+	     * this method allows the user to add a character
+	     */
 
 	    private void addCharacter() {
 	        System.out.print("Enter character name: ");
@@ -100,6 +111,10 @@ public class Menu {
 	        System.out.println("Character added successfully!");
 	    }
 	    
+	    /**
+	     * the method allows the user to attack a character of their choice with a character of their choice
+	     */
+	    
 	    private void attackCharacter() {
 	        MiddleEarthCharacter attacker = null;
 	        while (attacker == null) {
@@ -130,6 +145,10 @@ public class Menu {
 	            System.out.println("Attack was ineffective.");
 	        }
 	    }
+	    
+	    /**
+	     * this allows the user to update a character stored in the system
+	     */
 
 
 	    private void updateCharacter() {
@@ -154,6 +173,10 @@ public class Menu {
 	            System.out.println("No changes were made.");
 	        }
 	    }
+	    
+	    /**
+	     * the method allows the user to delete a character 
+	     */
 
 	    private void deleteCharacter() {
 	        MiddleEarthCharacter character = null;
