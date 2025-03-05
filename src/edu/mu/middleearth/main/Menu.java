@@ -126,6 +126,44 @@ public class Menu {
 	    }
 
 
-	    
+	    private void updateCharacter() {
+	        System.out.print("Enter the name of the character to update: ");
+	        String name = scanner.nextLine();
+	        MiddleEarthCharacter character = manager.getCharacter(name);
+	        if (character == null) {
+	            System.out.println("Character not found.");
+	            return;
+	        }
+	        System.out.print("Enter new name: ");
+	        String newName = scanner.nextLine();
+	        System.out.print("Enter new health: ");
+	        int newHealth = Integer.parseInt(scanner.nextLine());
+	        System.out.print("Enter new power: ");
+	        int newPower = Integer.parseInt(scanner.nextLine());
+
+	        boolean updated = manager.updateCharacter(character, newName, newHealth, newPower);
+	        if (updated) {
+	            System.out.println("Character updated successfully!");
+	        } else {
+	            System.out.println("No changes were made.");
+	        }
+	    }
+
+	    private void deleteCharacter() {
+	        System.out.print("Enter the name of the character to delete: ");
+	        String name = scanner.nextLine();
+	        MiddleEarthCharacter character = manager.getCharacter(name);
+	        if (character == null) {
+	            System.out.println("Character not found.");
+	            return;
+	        }
+	        boolean deleted = manager.deleteCharacter(character);
+	        if (deleted) {
+	            System.out.println("Character deleted successfully!");
+	        } else {
+	            System.out.println("Error deleting character.");
+	        }
+	    }
+
 	    
 }
