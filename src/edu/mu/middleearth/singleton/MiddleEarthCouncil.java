@@ -5,18 +5,27 @@ import edu.mu.middleearth.manager.CharacterManager;
 public class MiddleEarthCouncil {
 
 	
-	// private static variable to hold the single instance
+	/**
+	 * private static instance of MiddleEarthCoucil initialized to null
+	 */
 	private static MiddleEarthCouncil instance = null;
 	
-	// character Manager instance for managing the characters
+	/**
+	 * private initialization of characterManager
+	 */
 	private CharacterManager characterManager;
 	
-	// private constructor to prevent instantiation from outside 
+	/**
+	 * private constructor to prevent instantiation from outside  
+	 */
 	private MiddleEarthCouncil() {
 		characterManager = new CharacterManager();
 	}
 	
-	// Public static method to provide access to the single instance
+	/**
+	 * public static method to provide access to the single instance
+	 * @return returns the single instance
+	 */
 	public static MiddleEarthCouncil getInstance() {
 		if (instance == null) {
 			instance = new MiddleEarthCouncil();
@@ -24,7 +33,10 @@ public class MiddleEarthCouncil {
 		return instance; 
 	}
 	
-	// method to provide access to character manager
+	/**
+	 * method to provide access to character manager
+	 * @return returns the characterManager
+	 */
 	public CharacterManager getCharacterManager() {
 		return characterManager;
 	}
