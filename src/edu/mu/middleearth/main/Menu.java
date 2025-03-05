@@ -99,7 +99,33 @@ public class Menu {
 	        manager.addCharacter(character);
 	        System.out.println("Character added successfully!");
 	    }
+	    
+	    private void attackCharacter() {
+	        System.out.print("Enter the name of the attacking character: ");
+	        String attackerName = scanner.nextLine();
+	        MiddleEarthCharacter attacker = manager.getCharacter(attackerName);
+	        if (attacker == null) {
+	            System.out.println("Attacker not found.");
+	            return;
+	        }
+	        System.out.print("Enter the name of the target character: ");
+	        String targetName = scanner.nextLine();
+	        MiddleEarthCharacter target = manager.getCharacter(targetName);
+	        if (target == null) {
+	            System.out.println("Target not found.");
+	            return;
+	        }
+	        System.out.println("\n" + attacker.getName() + " (" + attacker.getRace() + ") attacks " 
+	                + target.getName() + " (" + target.getRace() + ")");
+	        if (attacker.attack(target)) {
+	            System.out.println("Attack successful! " + target.getName() 
+	                    + "'s new health is: " + target.getHealth());
+	        } else {
+	            System.out.println("Attack was ineffective.");
+	        }
+	    }
 
-	   
 
+	    
+	    
 }
